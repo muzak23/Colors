@@ -1,5 +1,7 @@
 package com.muzak23.colors;
 
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -25,35 +27,37 @@ public final class Colors extends JavaPlugin {
         if (command.getName().equals("color")) {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
-                player.sendMessage("Sender is a player");
                 if (args.length > 0) {
+                    if (args[0].equalsIgnoreCase("0") || args[0].equalsIgnoreCase("1") || args[0].equalsIgnoreCase("2") || args[0].equalsIgnoreCase("3") || args[0].equalsIgnoreCase("4") || args[0].equalsIgnoreCase("5") || args[0].equalsIgnoreCase("6") || args[0].equalsIgnoreCase("7") || args[0].equalsIgnoreCase("8") || args[0].equalsIgnoreCase("9") || args[0].equalsIgnoreCase("a") || args[0].equalsIgnoreCase("b") || args[0].equalsIgnoreCase("d") || args[0].equalsIgnoreCase("f")) {
+                        String colorCommand = "nick " + player.getName() + " &" + args[0] + player.getName();
+                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                    }
+                    else if (args[0].equalsIgnoreCase("c")) {
+                        if (sender.hasPermission("colors.c")) {
+                            String colorCommand = "nick " + player.getName() + " &" + args[0] + player.getName();
+                            Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                        } else {
+                            player.sendMessage(ChatColor.RED + "The administrator color cannot be picked!");
+                            }
+                    }
+                    else if (args[0].equalsIgnoreCase("e")) {
+                        if (sender.hasPermission("colors.e")) {
+                            String colorCommand = "nick " + player.getName() + " &" + args[0] + player.getName();
+                            Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                        } else {
+                            player.sendMessage(ChatColor.RED + "The moderator color cannot be picked!");
+                        }
+                    }
+                    else {
+                        player.sendMessage("Usage: /color <valid color code>");
+                    }
+                } else {
                     player.sendMessage("Usage: /color <valid color code>");
                 }
-                if (sender.hasPermission("colors.e"))
             } else {
                 System.out.println("You must be a player to use this command!");
             }
         }
         return true;
-        /*
-
-        - '$Script$%if%$primarygroup==moderator<and>$arg1==e'
-        - '/nick $player &$arg1$player'
-        - '$Script$%elseif%$primarygroup==admin'
-        - '/nick $player &$arg1$player'
-        - '$Script$%elseif%$arg1==e<and>$primarygroup!=moderator'
-        - '$text$&c&oThe mod color cannot be picked!'
-        - '$Script$%elseif%$arg1==c<and>$primarygroup!=admin'
-        - '$text$&c&oThe admin color cannot be picked!'
-        - '$Script$%elseif%$arg1==1<or>$arg1==2<or>$arg1==3<or>$arg1==4<or>$arg1==5<or>$arg1==6<or>$arg1==7<or>$arg1==8<or>$arg1==9<or>$arg1==0<or>$arg1==a<or>$arg1==b<or>$arg1==d<or>$arg1==f'
-        - '/nick $player &$arg1$player'
-        required_args: 1
-        permission-required: true
-        permission-node: mycommand.color
-        permission-error: "Donate $10 or more to change name color."
-        error-message: "/color <valid color code>"
-
-        return super.onCommand(sender, command, label, args);
-        */
     }
 }
