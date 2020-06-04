@@ -9,3 +9,5 @@ Requires the nick plugin to use the format `/nick (username) (nick)` and to allo
 `colors.e`: Lets users use the e color (yellow). Reserved for moderators.
 
 `colors.c`: Lets users use the c color (red). Reserved for administrators.
+
+`colors.rainbow`: Lets users use the rainbow name color
