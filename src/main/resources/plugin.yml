@@ -1,0 +1,11 @@
+name: Colors
+version: ${project.version}
+main: com.muzak23.colors.Colors
+api-version: 1.13
+authors: [muzak23]
+description: Colorful names
+website: www.muzak23.com
+commands:
+  color:
+    description: Colorful!
+    usage: /<command>
