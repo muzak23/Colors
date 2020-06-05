@@ -4,11 +4,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.command.PluginCommand;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import static org.bukkit.ChatColor.ITALIC;
 
 public final class Colors extends JavaPlugin {
 
@@ -81,7 +78,6 @@ public final class Colors extends JavaPlugin {
                                         Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
                                         break;
                                     default:
-                                        String errorSwitch = ChatColor.RED + "A problem has occurred, please contact the developer.";
                                         player.sendMessage(ChatColor.RED + "A problem has occurred, please contact the developer.");
                                 }
                             } else {
@@ -99,7 +95,7 @@ public final class Colors extends JavaPlugin {
             } else {
                 System.out.println("You must be a player to use this command!");  // sender not a player
             }
-        }
+        }  // end of if command is /color
         return true;
-    }
+    } // end of commands
 }
