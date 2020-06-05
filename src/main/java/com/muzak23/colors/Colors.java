@@ -1,5 +1,6 @@
 package com.muzak23.colors;
 
+import com.muzak23.colors.commands.Reload;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -12,13 +13,14 @@ public final class Colors extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        System.out.println("Color plugin enabled!");
+        System.out.println(ChatColor.GREEN + "Color plugin enabled!");
+        getCommand("color-reload").setExecutor(new Reload());  // not sure what this does, but it made the error go away!
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        System.out.println("Color plugin disabled.");
+        System.out.println(ChatColor.RED + "Color plugin disabled.");
     }
 
     @Override
@@ -87,7 +89,7 @@ public final class Colors extends JavaPlugin {
                             player.sendMessage("Usage: /color <valid color code.");  // not 0-9 or a-f or rainbow
                         }
                     } else {
-                        player.sendMessage("Usage: /color <valid color code>");  // more than one arg fail
+                        player.sendMessage("Usage: /color <valid color code>");  // less  one arg fail
                     }
                 } else {
                     player.sendMessage("Donate $10 or more to change name color.");  // colors.base perm fail
