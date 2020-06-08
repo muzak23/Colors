@@ -9,6 +9,3 @@ commands:
   color:
     description: Colorful!
     usage: /<command>
-  color-reload:
-    description: Reloads the plugin
-    usage: /<command>

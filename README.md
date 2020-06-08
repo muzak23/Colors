@@ -10,4 +10,4 @@ Requires the nick plugin to use the format `/nick (username) (nick)` and to allo
 
 `colors.c`: Lets users use the c color (red). Reserved for administrators.
 
-`colors.rainbow`: Lets users use the rainbow name color
+`colors.rainbow`
