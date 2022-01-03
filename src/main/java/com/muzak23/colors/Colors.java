@@ -7,6 +7,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.regex.Pattern;
+
 public final class Colors extends JavaPlugin {
 
     @Override
@@ -55,69 +57,83 @@ public final class Colors extends JavaPlugin {
                                 switch (nameLength) {
                                     case 2:
                                         colorCommand = "nick " + player.getName() + " &c" + name[0] + "&9" + name[1];
-                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand);
                                         break;
                                     case 3:
                                         colorCommand = "nick " + player.getName() + " &c" + name[0] + "&a" + name[1] + "&9" + name[2];
-                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand);
                                         break;
                                     case 4:
                                         colorCommand = "nick " + player.getName() + " &c" + name[0] + "&e" + name[1] + "&6" + name[2] + "&9" + name[3];
-                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand);
                                         break;
                                     case 5:
                                         colorCommand = "nick " + player.getName() + " &c" + name[0] + "&6" + name[1] + "&e" + name[2] + "&6" + name[3] + "&9" + name[4];
-                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand);
                                         break;
                                     case 6:
                                         colorCommand = "nick " + player.getName() + " &c" + name[0] + "&6" + name[1] + "&e" + name[2] + "&a" + name[3] + "&9" + name[4] + "&d" + name[5];
-                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand);
                                         break;
                                     case 7:
                                         colorCommand = "nick " + player.getName() + " &c" + name[0] + "&6" + name[1] + "&e" + name[2] + "&a" + name[3] + "&b" + name[4] + "&9" + name[5] + "&d" + name[6];
-                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand);
                                         break;
                                     case 8:
                                         colorCommand = "nick " + player.getName() + " &c" + name[0] + "&6" + name[1] + "&e" + name[2] + "&a" + name[3] + "&b" + name[4] + "&9" + name[5] + "&5" + name[6] + "&d" + name[7];
-                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand);
                                         break;
                                     case 9:
-                                        colorCommand = "nick " + player.getName() + " &c" + name[0] + "&6" + name[1] + "&e" + name[2] + "&a" + name[3] + "&b" + name[4] + "&9" + name[5] + "&5" + name[6] + "&d" + name[7] + "&c" +name[8];
-                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                                        colorCommand = "nick " + player.getName() + " &c" + name[0] + "&6" + name[1] + "&e" + name[2] + "&a" + name[3] + "&b" + name[4] + "&9" + name[5] + "&5" + name[6] + "&d" + name[7] + "&c" + name[8];
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand);
                                         break;
                                     case 10:
                                         colorCommand = "nick " + player.getName() + " &c" + name[0] + "&6" + name[1] + "&e" + name[2] + "&a" + name[3] + "&b" + name[4] + "&9" + name[5] + "&5" + name[6] + "&d" + name[7] + "&c" + name[8] + "&6" + name[9];
-                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand);
                                         break;
                                     case 11:
                                         colorCommand = "nick " + player.getName() + " &c" + name[0] + "&6" + name[1] + "&e" + name[2] + "&a" + name[3] + "&b" + name[4] + "&9" + name[5] + "&5" + name[6] + "&d" + name[7] + "&c" + name[8] + "&6" + name[9] + "&e" + name[10];
-                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand);
                                         break;
                                     case 12:
                                         colorCommand = "nick " + player.getName() + " &c" + name[0] + "&6" + name[1] + "&e" + name[2] + "&a" + name[3] + "&b" + name[4] + "&9" + name[5] + "&5" + name[6] + "&d" + name[7] + "&c" + name[8] + "&6" + name[9] + "&e" + name[10] + "&a" + name[11];
-                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand);
                                         break;
                                     case 13:
                                         colorCommand = "nick " + player.getName() + " &c" + name[0] + "&6" + name[1] + "&e" + name[2] + "&a" + name[3] + "&b" + name[4] + "&9" + name[5] + "&5" + name[6] + "&d" + name[7] + "&c" + name[8] + "&6" + name[9] + "&e" + name[10] + "&a" + name[11] + "&b" + name[12];
-                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand);
                                         break;
                                     case 14:
                                         colorCommand = "nick " + player.getName() + " &c" + name[0] + "&6" + name[1] + "&e" + name[2] + "&a" + name[3] + "&b" + name[4] + "&9" + name[5] + "&5" + name[6] + "&d" + name[7] + "&c" + name[8] + "&6" + name[9] + "&e" + name[10] + "&a" + name[11] + "&b" + name[12] + "&9" + name[13];
-                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand);
                                         break;
                                     case 15:
                                         colorCommand = "nick " + player.getName() + " &c" + name[0] + "&6" + name[1] + "&e" + name[2] + "&a" + name[3] + "&b" + name[4] + "&9" + name[5] + "&5" + name[6] + "&d" + name[7] + "&c" + name[8] + "&6" + name[9] + "&e" + name[10] + "&a" + name[11] + "&b" + name[12] + "&9" + name[13] + "&d" + name[14];
-                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand);
                                         break;
                                     case 16:
                                         colorCommand = "nick " + player.getName() + " &c" + name[0] + "&6" + name[1] + "&e" + name[2] + "&a" + name[3] + "&b" + name[4] + "&9" + name[5] + "&5" + name[6] + "&d" + name[7] + "&c" + name[8] + "&6" + name[9] + "&e" + name[10] + "&a" + name[11] + "&b" + name[12] + "&9" + name[13] + "&5" + name[14] + "&d" + name[15];
-                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand);
                                         break;
                                     default:
                                         player.sendMessage(ChatColor.RED + "A problem has occurred, please contact the developer.");
                                 }
                             } else {
                                 player.sendMessage(ChatColor.DARK_RED + "No permission for rainbow color.");  // colors.rainbow perm fail
+                            }
+                        } else if (Pattern.matches("(#[0-9a-fA-F]{6})", args[0])) {
+                            if (sender.hasPermission("colors.rgb")) {
+                                String colorCommand = "nick " + player.getName() + " &" + args[0] + player.getName();
+                                Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                            } else {
+                                player.sendMessage("Donate $50 to use RGB name colors.");
+                            }
+                        } else if (Pattern.matches("([0-9a-fA-F]{6})", args[0])) {
+                            if (sender.hasPermission("colors.rgb")) {
+                                String colorCommand = "nick " + player.getName() + " &#" + args[0] + player.getName();
+                                Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), colorCommand );
+                            } else {
+                                player.sendMessage("Donate $50 to use RGB name colors.");
                             }
                         } else {
                             player.sendMessage("Usage: /color <valid color code>");  // not 0-9 or a-f or rainbow
