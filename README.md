@@ -1,5 +1,6 @@
 # Colors
 Personal project to let users select their name color through the use of Essentials (or other plugin with a /nick command).
+Found on SpigotMC at https://www.spigotmc.org/resources/colors.98939/
 
 ## Syntax
 `/color [player] <valid color code>` (does not use & or color names for now)
